@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #d8d8d8;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  background: #fff;
+  transition: 0.5s;
+  z-index: 9999;
+  border-right: 1px solid #f1f1f3;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+}
+
+.main-section {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 200px;
+  display: flex;
+  flex-direction: row;
+}
+
+.chat-list {
+  border-right: 1px solid #f1f1f3;
+  height: 100%;
+  width: 300px;
+}
+
+.conversation-area {
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.top {
+  width: 100%;
+  border-bottom: 1px solid #f1f1f3;
+  padding: 10px 20px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu {
+  min-width: 100%;
+  height: 80%;
+  padding: 0 20px;
+}
+
+.menu ul li {
+  margin: 30px 0;
+}
+
+.menu ul li a i {
+  margin-right: 20px !important;
+}
+
+.logo-icon {
+  font-size: 30px;
+  color: #42b0f5;
+}
+
+.title {
+  color: #42b0f5 !important;
+}
+
+.chat-section-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.active-chats-list {
+  height: calc(100% - 60px);
+}
+
+.moments-wrapper {
+  height: 70px;
+}
+
+.active-chat-wrapper {
+  height: calc(100% - 200px);
+  overflow-y: auto;
+  padding: 10px 20px;
+  margin-top: 15px;
+}
+
+.moments {
+  justify-content: center !important;
+  cursor: pointer !important;
+  height: 50px;
+}
+
+.active-chat-container {
+  overflow-y: auto;
+  height: calc(100% - 60px);
+  /* background-color: #42b0f5; */
+}
+
+.encryption-notice {
+  font-size: 12px;
+  color: #42b0f5;
+  margin-top: 10px;
+  height: 60px;
+  text-align: center;
+  padding: 10px;
+}
+
+.side-bar-footer {
+  padding: 10px;
+}
+
+.open-messages {
+  height: calc(100% - 130px);
+  background-color: rgb(250, 255, 255);
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.message-input {
+  height: 60px;
+  padding: 20px;
+}
+
+.typing-tex {
+  color: #42b0f5;
+}
