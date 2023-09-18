@@ -2,6 +2,12 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <!-- add tailwindcss icon to my browser tab -->
+    <!-- <link
+      rel="icon"
+      href="https://res.cloudinary.com/dc6deairt/image/upload/v1638102932/user-32-05_bktgmb.jpg"
+    /> -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
     <title>Current</title>
@@ -64,7 +70,9 @@
               alt="Scott Micheal"
             />
             <div>
-              <h4 class="text-sm font-semibold text-gray-900">Scott Micheal</h4>
+              <h4 class="text-sm font-semibold text-gray-900">
+                Washingtone O.J.
+              </h4>
               <a
                 href="#"
                 class="text-[13px] text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
@@ -474,7 +482,31 @@
           </button>
         </div>
         <div class="open-messages">open messages</div>
-        <div class="message-input">message input</div>
+        <div class="message-input">
+          <form action="">
+            <div class="message-input-wrapper">
+              <button class="message-actions">
+                <i class="bx bx-microphone"></i>
+              </button>
+              <textarea
+                name="message"
+                id="message-text"
+                class="message-text-input resize-y max-h-32 overflow-y-auto items-center"
+                placeholder="Type a message"
+              ></textarea>
+              <button class="message-actions">
+                <i class="bx bx-smile"></i>
+              </button>
+              <button class="message-actions">
+                <i class="bx bx-paperclip"></i>
+              </button>
+              <button class="message-actions">
+                <i class="bx bx-send"></i>
+              </button>
+            </div>
+            <!-- <input type="text" > -->
+          </form>
+        </div>
       </div>
     </div>
   </body>

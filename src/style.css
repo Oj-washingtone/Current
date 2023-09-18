@@ -158,8 +158,42 @@
 .message-input {
   height: 60px;
   padding: 20px;
+  padding-top: 10px !important;
 }
 
 .typing-tex {
   color: #42b0f5;
+}
+.message-input-wrapper {
+  width: 90%;
+  margin: 0 auto !important;
+  background-color: #f2f3f5;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  height: auto !important;
+  justify-content: center;
+  padding: 5px 0 !important;
+}
+
+.message-text-input {
+  width: calc(100% - 160px);
+  outline: none !important;
+  background-color: inherit;
+  resize: none;
+  place-items: center;
+  height: 30px !important;
+  font-size: 13px !important;
+}
+
+.message-actions {
+  width: 40px !important;
+  height: 30px !important;
+  display: grid;
+  justify-content: center;
+  place-items: center;
+  text-align: center;
+  background-color: inherit;
+  border-radius: inherit;
 }
