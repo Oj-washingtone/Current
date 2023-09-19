@@ -53,7 +53,9 @@
             <a href="#"><i class="bx bx-briefcase"></i>We Work</a>
           </li>
           <li>
-            <a href="#"><i class="bx bx-cog"></i>settings</a>
+            <a href="../settings/settings.html"
+              ><i class="bx bx-cog"></i>settings</a
+            >
           </li>
         </ul>
       </div>
@@ -494,13 +496,24 @@
                 class="message-text-input resize-y max-h-32 overflow-y-auto items-center"
                 placeholder="Type a message"
               ></textarea>
-              <button class="message-actions">
+              <!-- Emoji section -->
+              <div class="emoji-popover" id="emoji-popover">
+                <!-- Add your emoji content here -->
+                😃 😄 😁
+              </div>
+              <!-- End emoji section -->
+              <button
+                type="button"
+                class="message-actions"
+                id="emoji-picker-btn"
+              >
                 <i class="bx bx-smile"></i>
               </button>
-              <button class="message-actions">
+
+              <button type="button" class="message-actions">
                 <i class="bx bx-paperclip"></i>
               </button>
-              <button class="message-actions">
+              <button type="button" class="message-actions">
                 <i class="bx bx-send"></i>
               </button>
             </div>
@@ -509,5 +522,7 @@
         </div>
       </div>
     </div>
+
+    <script src="chat.js"></script>
   </body>
 </html>

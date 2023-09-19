@@ -534,6 +534,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .mr-3 {
   margin-right: 0.75rem;
 }
@@ -684,10 +688,6 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.opacity-50 {
-  opacity: 0.5;
 }
 
 /* width */
@@ -889,6 +889,23 @@ video {
   text-align: center;
   background-color: inherit;
   border-radius: inherit;
+}
+
+.emoji-popover {
+  position: absolute;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  width: 50%;
+  bottom: 80px;
+  transition: opacity 0.3s, transform 0.3s;
+  height: 200px;
+  display: none;
+}
+
+.visible {
+  display: block !important;
 }
 
 .hover\:bg-gray-600:hover {
