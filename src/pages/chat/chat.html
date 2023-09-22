@@ -85,7 +85,7 @@
         </div>
       </div>
     </div>
-    <div class="main-section">
+    <div class="main-section flex-grow">
       <div class="chat-list">
         <div class="top">
           <div class="chat-section-header">
@@ -466,7 +466,7 @@
       <div class="conversation-area">
         <div class="top">
           <button
-            class="w-full text-left py-2 focus:outline-none focus-visible:bg-indigo-50"
+            class="w-full text-left py-2 focus:outline-none focus-visible:bg-indigo-50 toggle-right-section-button"
           >
             <div class="flex items-center">
               <img
@@ -478,15 +478,69 @@
               />
               <div>
                 <h4 class="text-sm font-semibold text-gray-900">Full name</h4>
-                <div class="text-[13px] typing-text">typing...</div>
+                <div
+                  class="text-[13px] typing-text"
+                  style="color: #1ff759e7 !important"
+                >
+                  typing...
+                </div>
               </div>
             </div>
           </button>
+          <button class="user-chat-actions">
+            <i class="bx bx-search"></i>
+          </button>
+          <button class="user-chat-actions"><i class="bx bx-video"></i></button>
+          <button class="user-chat-actions"><i class="bx bx-phone"></i></button>
+          <!-- Drpodown -->
+          <button class="user-chat-actions" id="user-chat-more-btn">
+            <i class="bx bx-dots-vertical-rounded"></i>
+          </button>
+          <div class="more-dropdown" id="more-dropdown">
+            <button><i class="bx bx-x"></i> Close chat</button>
+            <button><i class="bx bx-bell"></i> Manage notification</button>
+            <button>
+              <i class="bx bx-low-vision"></i> Disepearing messages
+            </button>
+            <button><i class="bx bx-cog"></i> Chat settings</button>
+            <button><i class="bx bx-message-rounded-x"></i> Clear chat</button>
+          </div>
+          <!-- End drop down -->
         </div>
-        <div class="open-messages">open messages</div>
+        <div class="open-messages">
+          <!-- Messages  -->
+          <!-- End messages -->
+          <!-- File Upload start -->
+          <div class="file-upload-division" id="upload-file-division">
+            <i class="bx bxs-cloud-upload"></i>
+            <h1
+              class="text-2xl font-bold text-gray-900"
+              style="margin-top: 1rem"
+            >
+              Upload your file
+            </h1>
+            <p
+              class="text-sm font-semibold text-gray-900"
+              style="margin-top: 1rem"
+            >
+              You can drag and drop youf files, or
+            </p>
+            <button
+              class="px-4 py-2 mt-2 text-xs font-semibold text-white bg-blue-500 rounded hover:bg-blue-600"
+            >
+              Select File
+            </button>
+          </div>
+          <!-- File upload End -->
+        </div>
         <div class="message-input">
           <form action="">
             <div class="message-input-wrapper">
+              <div class="audio-recording-indicator">
+                <div class="audio-recording-indicator-dot"></div>
+                <div class="audio-recording-indicator-dot"></div>
+                <div class="audio-recording-indicator-dot"></div>
+              </div>
               <button class="message-actions">
                 <i class="bx bx-microphone"></i>
               </button>
@@ -495,6 +549,7 @@
                 id="message-text"
                 class="message-text-input resize-y max-h-32 overflow-y-auto items-center"
                 placeholder="Type a message"
+                autofocus
               ></textarea>
               <!-- Emoji section -->
               <div class="emoji-popover" id="emoji-popover">
@@ -510,15 +565,118 @@
                 <i class="bx bx-smile"></i>
               </button>
 
-              <button type="button" class="message-actions">
+              <button type="button" class="message-actions" id="attach-file">
                 <i class="bx bx-paperclip"></i>
               </button>
               <button type="button" class="message-actions">
                 <i class="bx bx-send"></i>
               </button>
             </div>
-            <!-- <input type="text" > -->
           </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-section hidden">
+      <div class="top">
+        <button id="close-rigth-section-btn"><i class="bx bx-x"></i></button>
+        Account info
+      </div>
+      <div class="profile">
+        <div class="basic-details">
+          <div class="profile-image">
+            <img
+              class="rounded-full items-start flex-shrink-0 mr-3"
+              src="https://res.cloudinary.com/dc6deairt/image/upload/v1638102932/user-32-05_bktgmb.jpg"
+              alt="profile image"
+            />
+          </div>
+          <div class="profile-name">Washingtone Otieno</div>
+          <div class="profile-status">Online</div>
+        </div>
+        <div class="about">
+          <h5 class="section-title">About</h5>
+          <p class="about-text">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+          </p>
+        </div>
+        <div class="profile-actions">
+          <button class="action-button">
+            <p class="action-title">All files</p>
+            <div class="btn-icon-and-total">
+              <i class="bx bxs-folder"></i>
+              <h1>34</h1>
+            </div>
+          </button>
+          <button class="action-button">
+            <p class="action-title">All links</p>
+            <div class="btn-icon-and-total">
+              <i class="bx bx-link-alt"></i>
+              <h1>27</h1>
+            </div>
+          </button>
+        </div>
+
+        <div class="chat-settings-actions">
+          <button class="chat-settings-action-btn">
+            <i class="bx bxs-bell-off"></i> Mute notification
+          </button>
+          <button class="chat-settings-action-btn">
+            <i class="bx bxl-tiktok"></i> Custom notifications
+          </button>
+          <button class="chat-settings-action-btn">
+            <i class="bx bxs-low-vision"></i> Disappearing chats
+          </button>
+          <button class="chat-settings-action-btn">
+            <i class="bx bxs-archive-in"></i> Archive
+          </button>
+          <button class="chat-settings-action-btn">
+            <i class="bx bxs-group"></i> Create group
+          </button>
+          <button class="chat-settings-action-btn">
+            <i class="bx bx-block"></i> Block user
+          </button>
+          <button class="chat-settings-action-btn">
+            <i class="bx bxs-dislike"></i> Report user
+          </button>
+        </div>
+
+        <div class="group-count">
+          <h5 class="section-title">Common groups</h5>
+          <button>
+            <div class="flex -space-x-4 moments">
+              <img
+                class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800"
+                src="https://img.freepik.com/free-photo/close-up-portrait-lovely-young-african-american-woman-with-curly-afro-haircut-smiling-with-happy-pleasant-expression-enjoying-winter-holidays-wearing-sweater-blue-wall_1258-35442.jpg?size=626&ext=jpg&ga=GA1.1.1259535979.1687356853&semt=ais"
+                alt=""
+              />
+              <img
+                class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800"
+                src="https://img.freepik.com/free-photo/close-up-portrait-lovely-young-african-american-woman-with-curly-afro-haircut-smiling-with-happy-pleasant-expression-enjoying-winter-holidays-wearing-sweater-blue-wall_1258-35442.jpg?size=626&ext=jpg&ga=GA1.1.1259535979.1687356853&semt=ais"
+                alt=""
+              />
+              <img
+                class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800"
+                src="https://img.freepik.com/free-photo/indoor-shot-glad-young-bearded-man-mustache-wears-denim-shirt-smiles-happily_273609-8698.jpg?size=626&ext=jpg&ga=GA1.1.1259535979.1687356853&semt=ais"
+                alt=""
+              />
+              <img
+                class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800"
+                src="https://img.freepik.com/free-photo/close-up-portrait-lovely-young-african-american-woman-with-curly-afro-haircut-smiling-with-happy-pleasant-expression-enjoying-winter-holidays-wearing-sweater-blue-wall_1258-35442.jpg?size=626&ext=jpg&ga=GA1.1.1259535979.1687356853&semt=ais"
+                alt=""
+              />
+              <img
+                class="w-10 h-10 border-2 border-white rounded-full dark:border-gray-800"
+                src="https://img.freepik.com/free-photo/casual-young-african-man-smiling-isolated-white_93675-128895.jpg?size=626&ext=jpg&ga=GA1.1.1259535979.1687356853&semt=ais"
+                alt=""
+              />
+              <div
+                class="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800"
+              >
+                +7
+              </div>
+            </div>
+          </button>
         </div>
       </div>
     </div>
